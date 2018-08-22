@@ -1,0 +1,235 @@
+{
+  "schedule": [{
+    "date": "Domingo 28/10/2018",
+    "groups": [{
+      "time": "Domingo 28/10/2018",
+      "sessions": [{
+        "name": "Fiesta Pre CLEIN",
+        "timeStart": "10:00 pm",
+        "timeEnd": "12:00 am",
+        "location": ["Hard Rock Cafe Santo Domingo"],
+        "tracks": ["Fiesta"],
+        "id": "1"
+      }]
+    }, {
+      "time": "Lunes 29/10/2018",
+      "sessions": [{
+        "name": "Rally de Integración Social",
+        "location": "Universidad Nacional Pedro Henriquez Ureña",
+        "description": "",
+        "timeStart": "10:00 am",
+        "timeEnd": "3:30 pm",
+        "tracks": ["Integración"],
+        "id": "2"
+      }, {
+        "name": "Inauguración",
+        "location": "Hotel Sede",
+        "description": "Tema Motivacional.",
+        "speakerNames": ["Pepín Corripio"],
+        "timeStart": "8:00 pm",
+        "timeEnd": "10:00 pm",
+        "tracks": ["Ponencia Magistral"],
+        "id": "3"
+      }, {
+        "name": "Fiesta de Apertura",
+        "location": "Hotel Sede",
+        "description": "",
+        "timeStart": "10:00 pm",
+        "timeEnd": "12:00 am",
+        "tracks": ["Fiesta"],
+        "id": "4"
+      }]
+    }, {
+      "time": "Martes 30/10/2018",
+      "sessions": [{
+        "name": "Lean Estudiantes",
+        "location": "Salón 1",
+        "description": "",
+        "speakerNames": ["Frank Rainieri", "Ricardo Tirado"],
+        "timeStart": "9:00 am",
+        "timeEnd": "10:00 am",
+        "tracks": ["Ponencias Estudiantiles"],
+        "id": "5"
+      }, {
+        "name": "Lean Startup",
+        "location": "Salón 2",
+        "description": "",
+        "speakerNames": ["Luis Sena", "Adalberto Arias"],
+        "timeStart": "10:00 am",
+        "timeEnd": "10:30 am",
+        "tracks": ["Startup"],
+        "id": "6"
+      }, {
+        "name": "Emprendimiento Social",
+        "location": "Salón 2202",
+        "description": "",
+        "speakerNames": ["Isabella Iguan"],
+        "timeStart": "2:30 pm",
+        "timeEnd": "3:30 pm",
+        "tracks": ["Startup"],
+        "id": "7"
+      }]
+    }, {
+      "time": "Miércoles 31/10/2018",
+      "sessions": [{
+      "name": "Introducción a Project Management",
+      "location": "Salon 1",
+      "description": "",
+      "speakerNames": ["Eunice Durán","Jordi Portet"],
+      "timeStart": "9:00 am",
+      "timeEnd": "10:00 am",
+      "tracks": ["Project Management"],
+      "id": "8"
+    }]
+    }, {
+      "time": "Jueves 1/11/2018",
+      "sessions": [{
+        "name": "Taller de Mejora Continua",
+        "location": "Sala 3",
+        "description": ".",
+        "speakerNames": ["Frank Rainieri"],
+        "timeStart": "11:00 am",
+        "timeEnd": "1:00 pm",
+        "tracks": ["Taller","Mejora Continua"],
+        "id": "14"
+      }, {
+        "name": "Cultura de la Mejora Continua",
+        "location": "Auditorio",
+        "description": "",
+        "speakerNames": ["Bernardo Álvarez", "Florangel Abreu"],
+        "timeStart": "1:30 pm",
+        "timeEnd": "2:00 pm",
+        "tracks": ["Ponencia Magistral","Mejora Continua"],
+        "id": "15"
+      }]
+    }, {
+      "time": "Viernes 2/11/2018",
+      "sessions": [{
+        "name": "Visitas Técnicas",
+        "location": "",
+        "description": "",
+        "timeStart": "9:00 am",
+        "timeEnd": "15:00 pm",
+        "tracks": ["Visitas Técnicas"],
+        "id": "16"
+      }, {
+        "name": "Ponencia Cultural",
+        "location": "Auditorio",
+        "description": "",
+        "speakerNames": ["Bernardo Álvarez"],
+        "timeStart": "8:00 pm",
+        "timeEnd": "10:00 pm",
+        "tracks": ["Ponencia Magistral"],
+        "id": "17"
+      }]
+    }]
+  }],
+
+
+  "speakers": [{
+    "name": "Pepín Corripio",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "1"
+  },{
+    "name": "Frank Rainieri",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "2"
+  },{
+    "name": "Ricardo Tirado",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "3"
+  },{
+    "name": "Luis Sena",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "4"
+  },{
+    "name": "Adalberto Arias",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "5"
+  },{
+    "name": "Bernardo Álvarez",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "6"
+  },{
+    "name": "Jordi Portet",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "7"
+  },{
+    "name": "Florangel Abreu",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "8"
+  },{
+    "name": "Eunice Durán",
+    "profilePic": "assets/img/speakers/bear.jpg",
+    "twitter": "aleiiaf",
+    "about": "Pepín Corripio",
+    "location": "Everywhere",
+    "email": "pepincorripio@gmail.com",
+    "phone": "+1-541-754-3010",
+    "id": "9"
+  }],
+
+
+  "map": [{
+    "name": "Hard Rock Cafe Santo Domingo",
+    "lat": 18.472802,
+    "lng": -69.941076
+  }, {
+    "name": "Barceló Santo Domingo Hotel Sede",
+    "lat": 18.4746017,
+    "lng": -69.9126833,
+    "center": true
+  }, {
+    "name": "Jalao Santo Domingo",
+    "lat": 18.4738343,
+    "lng": -69.8861565
+  }, {
+    "name": "Mamma Club",
+    "lat": 18.475742,
+    "lng": -69.933794
+  },{
+    "name": "Universidad Nacional Pedro Henriquez Ureña",
+    "lat": 18.485813,
+    "lng": -69.948334
+  }]
+}
