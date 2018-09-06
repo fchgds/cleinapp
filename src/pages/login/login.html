@@ -9,13 +9,13 @@
 
 <ion-content>
 	<div class="logo">
-		<img src="assets/img/appicon.svg" alt="Ionic logo">
+		<img src="assets/img/logoImagotipoClein2018.png" alt="Logo CLEIN">
 	</div>
 
 	<form #loginForm="ngForm" novalidate>
 		<ion-list no-lines>
 			<ion-item>
-				<ion-label stacked color="primary">Email</ion-label>
+				<ion-label stacked color="primary">Correo Electrónico</ion-label>
 				<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
 					required>
 				</ion-input>
@@ -37,9 +37,6 @@
 		<ion-row responsive-sm>
 			<ion-col>
 				<button ion-button (click)="onLogin(loginForm)" type="submit" block>Iniciar</button>
-			</ion-col>
-			<ion-col>
-				<button ion-button (click)="onSignup()" color="light" block>Registrarse</button>
 			</ion-col>
 		</ion-row>
 	</form>

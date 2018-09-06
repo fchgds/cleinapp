@@ -10,7 +10,6 @@ import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
-import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 
@@ -40,10 +39,10 @@ export class ConferenceApp {
   // the left menu only works after login
   // the login page disables the left menu
   appPages: PageInterface[] = [
-    { title: 'Programa', name: 'TabsPage', component: TabsPage, tabComponent: SchedulePage, index: 0, icon: 'calendar' },
-    { title: 'Conferencistas', name: 'TabsPage', component: TabsPage, tabComponent: SpeakerListPage, index: 1, icon: 'contacts' },
-    { title: 'Mapa', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' },
-    { title: 'Acerca de', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'information-circle' }
+    { title: 'CLEIN', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 0, icon: 'information-circle' },
+    { title: 'Programa', name: 'TabsPage', component: TabsPage, tabComponent: SchedulePage, index: 1, icon: 'calendar' },
+    { title: 'Conferencistas', name: 'TabsPage', component: TabsPage, tabComponent: SpeakerListPage, index: 2, icon: 'contacts' },
+    { title: 'Mapa', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 3, icon: 'map' }
   ];
   loggedInPages: PageInterface[] = [
     { title: 'Cuenta', name: 'AccountPage', component: AccountPage, icon: 'person' },
@@ -74,6 +73,7 @@ export class ConferenceApp {
     //     }
     //     this.platformReady()
     //   });
+    this.platformReady();
 
     // load the conference data
     confData.load();
@@ -113,10 +113,6 @@ export class ConferenceApp {
       // Give the menu time to close before changing to logged out
       this.userData.logout();
     }
-  }
-
-  openTutorial() {
-    this.nav.setRoot(TutorialPage);
   }
 
   listenToLoginEvents() {
