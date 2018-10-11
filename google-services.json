@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "553226645868",
+    "firebase_url": "https://clein-app.firebaseio.com",
+    "project_id": "clein-app",
+    "storage_bucket": "clein-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553226645868:android:27c428965b2d8007",
+        "android_client_info": {
+          "package_name": "org.aleiiaf.clein"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553226645868-bfbdn7vp4kslsk37k8405qceauqvn82i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0Qg7V5NArGYTp7eYzf56JJXU0kT6wUxA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
