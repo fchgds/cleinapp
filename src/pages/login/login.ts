@@ -3,14 +3,8 @@ import { NgForm } from '@angular/forms';
 
 import {LoadingController, NavController, ToastController} from 'ionic-angular';
 
-import { UserData } from '../../providers/user-data';
-
-import { UserOptions } from '../../interfaces/user-options';
-
-import { AccountPage } from '../account/account';
-import { SignupPage } from '../signup/signup';
-
 import { AuthService } from '../../providers/auth-service';
+import {HomePage} from "../home/home";
 
 
 @Component({
@@ -18,16 +12,18 @@ import { AuthService } from '../../providers/auth-service';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  login: UserOptions = { username: '', password: '' };
+  login = { username: '', password: '' };
   submitted = false;
 
   constructor(public navCtrl: NavController,
-              public userData: UserData,
+              private toastCtrl: ToastController,
               public authService : AuthService,
-              public toastController: ToastController,
               public loadingController: LoadingController,
 
-  ) { }
+  ) {
+    this.login.username="";
+    this.login.password="";
+  }
 
   onLogin(form: NgForm) {
     this.submitted = true;
@@ -36,19 +32,22 @@ export class LoginPage {
       let loading = this.loadingController.create({ content: 'Ingresando' });
       loading.present();
       this.authService.loginWithEmail(this.login).then(data => {
-        if (data == true) {
+        if (data.success == true) {
           this.authService.isLogged = true;
           loading.dismiss();
-          setTimeout(() => { this.navCtrl.push(AccountPage); }, 2000);
+          this.presentToast("Login Correcto");
+          setTimeout(() => { this.navCtrl.push(HomePage, {'id_admin':data.data[0].admin_id}); }, 2000);
 
         } else {
           loading.dismiss();
+          this.presentToast("Error en Usuario o Contraseña");
           setTimeout(() => {
             console.log(data);
             }, 2000);
         }
       }).catch(err => {
         loading.dismiss();
+        this.presentToast("Error en Comunicación");
         setTimeout(() => {
           console.log(err);
         }, 2000);
@@ -56,7 +55,17 @@ export class LoginPage {
     }
   }
 
-  onSignup() {
-    this.navCtrl.push(SignupPage);
+  presentToast(text:string) {
+    let toast = this.toastCtrl.create({
+      message: text,
+      duration: 3000,
+      position: 'middle'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
   }
 }

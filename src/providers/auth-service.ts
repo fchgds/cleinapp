@@ -33,16 +33,16 @@ export class AuthService {
   {
     return new Promise(resolve => {
       let params: any = { email: user.username, pass: user.password };
-      this.http.post<any>(this.urlBaseAPI + "login.php",
+      this.http.post<any>(this.urlBaseAPI + "loginadministrator.php",
         params,
         httpOptions
-        )
+      )
         .subscribe(
           data => {
             if(data['success']){
               this.createSessionLocalStorage(data['id'], data['nombreyapellidoInput']);
               this.isLogged = true;
-              resolve(this.isLogged);
+              resolve(data);
             }else{
               resolve(data['message']);
             }

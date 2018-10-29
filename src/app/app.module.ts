@@ -1,101 +1,42 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import {HttpClientModule} from "@angular/common/http";
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import {QRScanner} from "@ionic-native/qr-scanner";
 
-import { IonicStorageModule } from '@ionic/storage';
-
-import { ConferenceApp } from './app.component';
-
-import { AboutPage } from '../pages/about/about';
-import { PopoverPage } from '../pages/about-popover/about-popover';
-import { AccountPage } from '../pages/account/account';
+import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-import { MapPage } from '../pages/map/map';
-import { SchedulePage } from '../pages/schedule/schedule';
-import { ScheduleFilterPage } from '../pages/schedule-filter/schedule-filter';
-import { SessionDetailPage } from '../pages/session-detail/session-detail';
-import { SignupPage } from '../pages/signup/signup';
-import { SpeakerDetailPage } from '../pages/speaker-detail/speaker-detail';
-import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
-import { TabsPage } from '../pages/tabs-page/tabs-page';
-import { TutorialPage } from '../pages/tutorial/tutorial';
-import { SupportPage } from '../pages/support/support';
-
-import { ConferenceData } from '../providers/conference-data';
-import { UserData } from '../providers/user-data';
-import { AuthService } from '../providers/auth-service';
+import {AsistenciaService} from "../providers/asistencia-service";
+import {AuthService} from "../providers/auth-service";
 
 
 @NgModule({
   declarations: [
-    ConferenceApp,
-    AboutPage,
-    AccountPage,
-    LoginPage,
-    MapPage,
-    PopoverPage,
-    SchedulePage,
-    ScheduleFilterPage,
-    SessionDetailPage,
-    SignupPage,
-    SpeakerDetailPage,
-    SpeakerListPage,
-    TabsPage,
-    TutorialPage,
-    SupportPage
+    MyApp,
+    HomePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(ConferenceApp, {}, {
-      links: [
-        { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
-        { component: SchedulePage, name: 'Programa', segment: 'schedule' },
-        { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:sessionId' },
-        { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
-        { component: SpeakerListPage, name: 'SpeakerList', segment: 'speakerList' },
-        { component: SpeakerDetailPage, name: 'SpeakerDetail', segment: 'speakerDetail/:speakerId' },
-        { component: MapPage, name: 'Mapa', segment: 'map' },
-        { component: AboutPage, name: 'About', segment: 'about' },
-        { component: TutorialPage, name: 'Tutorial', segment: 'tutorial' },
-        { component: SupportPage, name: 'SupportPage', segment: 'support' },
-        { component: LoginPage, name: 'LoginPage', segment: 'login' },
-        { component: AccountPage, name: 'AccountPage', segment: 'account' },
-        { component: SignupPage, name: 'SignupPage', segment: 'signup' }
-      ]
-    }),
-    IonicStorageModule.forRoot()
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    ConferenceApp,
-    AboutPage,
-    AccountPage,
-    LoginPage,
-    MapPage,
-    PopoverPage,
-    SchedulePage,
-    ScheduleFilterPage,
-    SessionDetailPage,
-    SignupPage,
-    SpeakerDetailPage,
-    SpeakerListPage,
-    TabsPage,
-    TutorialPage,
-    SupportPage
+    MyApp,
+    HomePage,
+    LoginPage
   ],
   providers: [
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-    ConferenceData,
-    UserData,
-    InAppBrowser,
+    StatusBar,
     SplashScreen,
-    AuthService
+    AsistenciaService,
+    AuthService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    QRScanner
   ]
 })
-export class AppModule { }
+export class AppModule {}
